@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 export default function App() {
+  //boolean data type
+  // let isFormOpen = false;
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   useEffect(() => {
@@ -9,10 +11,11 @@ export default function App() {
   }, [isFormOpen]);
 
   function handleClick() {
-    //manipulating DOM is not recommended in React
+    //directly manipulating DOM is not recommended in React
     setIsFormOpen((prev) => !prev);
+    // isFormOpen = !isFormOpen;
   }
-
+ 
   return (
     <div>
       <div>Create New Task</div>
